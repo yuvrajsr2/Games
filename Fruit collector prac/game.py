@@ -1,5 +1,4 @@
 import pygame
-
 import random
 
 # Initializing pygame
@@ -11,17 +10,17 @@ window = pygame.display.set_mode ((Width, Height))
 pygame.display.set_caption("Fruit Collecter")
 
 # Background image
-backgroundImg = pygame.image.load('background.png').convert()
+backgroundImg = pygame.image.load('images/background.png').convert()
 backgroundImg = pygame.transform.scale(backgroundImg, (1000, 600))
 
 # Floor image
-floorImg = pygame.image.load('floor.png').convert()
+floorImg = pygame.image.load('images/floor.png').convert()
 floorImg = pygame.transform.scale(floorImg, (1000, 200))
 
 # Global variables
 score = 0
 apples_needed = 10
-icon_fruit = pygame.image.load('apple.png').convert_alpha()
+icon_fruit = pygame.image.load('images/apple.png').convert_alpha()
 score_font = pygame.font.SysFont('Arial', 50)
 game_over_font = pygame.font.SysFont('Arial', 100)
 level = 1
@@ -187,7 +186,7 @@ while running:
             x_pos = random.randrange(0, 1000)
             y_pos = random.randrange(-500, -50)
             y_speed = 10
-            fruit = Fruit('apple.png', x_pos, y_pos, y_speed)
+            fruit = Fruit('images/apple.png', x_pos, y_pos, y_speed)
             fruit_group.add(fruit)
 
         # Event for spawning rotten apples when the userevent is triggered
@@ -195,7 +194,7 @@ while running:
             x = random.randrange(100, 900)
             y = random.randrange(-500, -50)
             speed = 10
-            rotten_fruit = Rotten_fruit('rotten apple.png', x, y, speed)
+            rotten_fruit = Rotten_fruit('images/rotten apple.png', x, y, speed)
             rotten_fruit_group.add(rotten_fruit)
 
         # When this is triggered then reduce the time
