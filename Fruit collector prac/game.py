@@ -160,7 +160,7 @@ def displaying_text():
 
 
 # Player group
-player = Player('shopping-cart.png', 470, 500, 20)
+player = Player('images/shopping-cart.png', 470, 500, 20)
 player_group = pygame.sprite.GroupSingle(player)
 
 # Fruit group
